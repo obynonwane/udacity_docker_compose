@@ -5,7 +5,7 @@ services:
     build: ./avail_missed_blocks
     container_name: avail_backend
     ports:
-      - "8080:8080"
+      - "5000:8080"
     volumes:
       - ./avail_missed_blocks:/app
       - ./app/node_modules
