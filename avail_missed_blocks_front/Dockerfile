@@ -16,9 +16,11 @@ RUN npm install --save-dev @angular-devkit/build-angular
 
 COPY . .
 
-CMD ng serve --host 0.0.0.0
+EXPOSE 4200
 
-EXPOSE 4200/tcp
+CMD ["ng", "serve"]
+
+
 
 
 
