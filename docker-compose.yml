@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  server:
+    build: ./avail_missed_blocks
+    container_name: avail_backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./avail_missed_blocks:/app
+      - ./app/node_modules
+  db:
+    image: "postgres"
+    container_name: avail_db
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_USER: "postgres"
+  front:
+    build: ./avail_missed_blocks_front
+    container_name: avail_front
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./avail_missed_blocks_front:/app
+      - ./app/node_modules

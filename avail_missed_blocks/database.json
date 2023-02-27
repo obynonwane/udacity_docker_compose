@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "driver": "pg",
+    "host": "db",
+    "port": "5432",
+    "database": "postgres",
+    "user": "postgres",
+    "password": "1234"
+  },
+  "test": {
+    "driver": "pg",
+    "host": "db",
+    "port": "5432",
+    "database": "postgres",
+    "user": "postgres",
+    "password": "1234"
+  },
+  "prod": {
+    "driver": "pg",
+    "host": "salt.db.elephantsql.com",
+    "port": "5432",
+    "database": "knqqypdj",
+    "user": "knqqypdj",
+    "password": "pTrWCiGwYHwApGbb-mSP0WelikYxa7vJ"
+  }
+}
