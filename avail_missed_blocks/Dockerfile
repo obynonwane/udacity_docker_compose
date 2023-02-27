@@ -1,16 +1,13 @@
 FROM node:17-alpine
 
-RUN yarn config set fetch-timeout 1800000
-
 WORKDIR /app
 
 COPY package.json .
 
-COPY . . 
+COPY . .
 
-RUN yarn install
+RUN yarn install 
 
 EXPOSE 8080
 
-CMD ["yarn", "watch"]
-
+CMD ["yarn",  "watch"]
