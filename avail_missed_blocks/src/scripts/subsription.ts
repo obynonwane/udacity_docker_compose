@@ -8,7 +8,7 @@ export class Subscription {
   // Construct
   async main() {
     try {
-      const wsProvider = new WsProvider("");
+      const wsProvider = new WsProvider(process.env.WEBSOCKET_URL);
 
       const api = await ApiPromise.create({ provider: wsProvider });
       // Wait until we are ready and connected
